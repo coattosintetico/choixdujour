@@ -1,0 +1,298 @@
+
+* {
+	box-sizing: border-box;
+	color: white;
+}
+
+body {
+	background-color: rgb(40,40,40); /*solo especificamos el color*/
+	margin: 0px;
+}
+
+
+
+/*############
+#   HEADER   #
+############*/
+
+h1 {
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+	margin: 0px; /*delete margin from the title*/
+	padding: 75px 20px 40px 20px;
+	/* I modified the bottom padding bc I removed the nav temporarly (previously, 10px)*/
+	letter-spacing: 25px;
+	text-indent: 25px;
+}
+
+nav {
+	padding: 20px 0px; /*the top and bottom paddings have to match the menu's link paddings*/
+	text-align: center; /*to center the menu elements*/
+}
+
+nav a:link, a:visited {
+	background-color: rgb(60,60,60);
+	padding: 10px 20px;
+	margin-right: 10px; /*only one margin, bc otherwise it doesn't center properly*/
+	/*this fucking adjustment of the margins gives problems with centering
+	for the moment i'm gonna supress the navbar*/
+	border-style: solid;
+	border-width: 0px 1px;
+	border-color: white;
+	text-decoration-color: transparent;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-weight: normal;
+	transition: 0.5s;
+}
+
+nav a:hover {
+	background-color: rgb(200,200,200);
+	color: black;
+}
+
+nav a:active {
+	background-color: rgb(150,150,150);
+}
+
+
+
+/*###########
+#   TITLE   #
+###########*/
+
+#head {
+	background-color: rgb(100,100,100);
+	margin-top: 40px; /*esto marca la separación con el menú*/
+}
+
+#title {
+	text-align: center;
+	font-size: 2em;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-weight: bold;
+	margin: 0px;
+	padding-top: 80px;
+	padding-bottom: 40px;
+	letter-spacing: 15px;
+	text-indent:    15px;
+}
+
+#date {
+	text-align: center;
+	text-indent: 0px;
+	font-size: 0.75em;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	margin: 0px;
+	padding-bottom: 80px;
+	color: white;
+}
+
+
+
+/*#############
+#   BUTTONS   #
+#############*/
+
+.changepcolortowhite {
+	background-color: rgb(80,80,80);
+	border: none;
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+	padding: 10px 20px;
+	margin: 30px 0px 0px 0px;
+	transition-duration: 0.4s;
+	cursor: pointer; /*to change the cursor when hovering it*/
+}
+
+.changepcolortowhite:hover {
+	background-color: black;
+}
+
+.changepcolortoblack {
+	background-color: rgb(50,50,50);
+	border: none;
+	color: white;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 10px;
+	padding: 10px 20px;
+	margin: 32px 0px 2px 0px; /*el margen tiene 2px(x2) más, para compensar el cambio de 14px a 10px*/
+	transition-duration: 0.4s;
+	cursor: pointer; /*to change the cursor when hovering it*/
+	display: none;
+}
+
+.changepcolortoblack:hover {
+	background-color: black;
+}
+
+@keyframes blacktowhite {
+	from {color: rgb(40,40,40);}
+	to {color: white;}
+}
+
+@keyframes whitetoblack {
+	from {color: white;}
+	to {color: rgb(40,40,40);}
+}
+
+@keyframes hrblacktowhite {
+	from {border: 1px solid rgb(40,40,40)}
+	to {border: 1px solid white;}
+}
+
+@keyframes hrwhitetoblack {
+	from {border: 1px solid white;}
+	to {border: 1px solid rgb(40,40,40);}
+}
+
+/*##########
+#   TEXT   #
+##########*/
+
+#text {
+	padding: 10px 0px 50px 0px;
+	width: 800px;
+	margin: 0px auto;
+}
+
+p {
+	color: rgb(40,40,40);
+	font-family: "Lucida Console", Monaco, monospace;
+	text-indent: 3em;
+	text-align: justify;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+p.centered {
+	text-align: center;
+	text-indent: 0;
+}
+
+p.reflect {
+	font-family: serif;
+	font-style: italic;
+	font-size: 18px;
+}
+
+p.introduction{ /*to paragraphs for the intro*/
+	color: white;
+	text-indent: 0;
+}
+
+/*algunas clases que he ido haciendo para
+especificar ciertas cosas. encontraba más
+útil especificarlas como clase que in-line
+por el simple hecho de que si quiero modificarlas
+responsive, puedo hacerlo, mientras que
+in line no.*/
+
+p.digression {
+	text-indent: 0;
+	padding: 0px 40px;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+p.quoteblock {
+	text-indent: 0;
+	padding: 0px 40px;
+	font-size: 16px;
+	line-height: 23px;
+	font-family: serif;
+}
+
+#text a.dream:link, #text a.dream:visited {
+	color: white;
+	text-decoration-color: transparent;
+	transition:0.25s;
+}
+
+#text a.dream:hover {
+	color: black;
+	background-color: rgb(230,230,230);
+}
+
+a {
+	color: inherit;
+}
+
+q {
+	color: inherit;
+}
+
+i {
+	color: inherit;
+}
+
+em {
+	color: inherit;
+}
+
+hr {
+	border: 1px solid rgb(40,40,40);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.centerimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+/*################
+#   RESPONSIVE   #
+################*/
+
+/*se cumplirá solo para pantallas <= 600px de ancho:*/
+@media only screen and (max-width: 600px) {
+	h1 {
+		letter-spacing: 0;
+		text-indent: 0;
+	}
+	nav a:link, a:visited, a:hover, a:active {
+		padding: 5px 10px;
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+	#head {
+		margin-top: 20px;
+	}
+	#title {
+		letter-spacing: 0px;
+		text-indent:    0px;
+	}
+	#text {
+		width: 100%; /*para que ocupe toda la pantalla*/
+		padding: 30px 30px 50px 30px;
+	}
+	#text p {
+		font-size: 14px;
+		text-align: left;
+		text-indent: 2em;
+		line-height: 22px;
+	}
+	#text p.centered { /*repeat it to make it effective. otherwise the above setup will rewrite it*/
+		text-align: center;
+		text-indent: 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#text {
+		width: 700px;
+	}
+}
