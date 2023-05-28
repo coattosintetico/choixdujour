@@ -13,7 +13,9 @@ $(document).ready(function(){
 		'./dreams/20200809_ciego_enano.html',
 		'./dreams/20200811_marabunta.html',
 		'./dreams/20200820_nochevieja_en_la_vaguada.html',
-		'./dreams/20201129_gravedad_lateral.html'
+		'./dreams/20201129_gravedad_lateral.html',
+		'./dreams/20221029_el_infierno_es_musica_alta_y_gringos_comiendo_burrata.html',
+		'./dreams/20230528_BIRMINGHAM....html',
 	];
 
 	// there's no need this time to reject the file name from the list,

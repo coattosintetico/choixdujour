@@ -27,12 +27,13 @@ $(document).ready(function(){
 		'20200809_ciego_enano.html',
 		'20200811_marabunta.html',
 		'20200820_nochevieja_en_la_vaguada.html',
-		'20201129_gravedad_lateral.html'
+		'20201129_gravedad_lateral.html',
+		'20221029_el_infierno_es_musica_alta_y_gringos_comiendo_burrata.html',
+		'20230528_BIRMINGHAM....html',
 	];
 
 	// create the new list without current file:
 	var filename = 	location.pathname.split('/').slice(-1);
-	/*console.log(filename);*/
 	var dreamList = [];
 	var i;
 	for (i = 0; i < completeDreamList.length; i++) {
@@ -40,7 +41,6 @@ $(document).ready(function(){
 			dreamList.push(completeDreamList[i])
 		}
 	}
-	/*console.log(dreamList);*/
 	function getRandomDream() {
 		var randomIndex = Math.round(dreamList.length*Math.random());
 		return dreamList[randomIndex];

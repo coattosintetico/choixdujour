@@ -237,6 +237,14 @@ hr {
 	border: 1px solid rgb(40,40,40);
 }
 
+/* Change the quote symbols to guillemets instead of apostrophes (default ones) */
+q:before {
+	content: "\00AB";
+}
+q:after {
+	content: "\00BB";
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
